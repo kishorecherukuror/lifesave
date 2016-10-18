@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Bgroups</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>A positive</th>
+      <th>B positive</th>
+      <th>O positive</th>
+      <th>Ab positive</th>
+      <th>A negative</th>
+      <th>B negative</th>
+      <th>O negative</th>
+      <th>Ab negative</th>
+      <th>Center</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bgroups.each do |bgroup| %>
+      <tr>
+        <td><%= bgroup.a_positive %></td>
+        <td><%= bgroup.b_positive %></td>
+        <td><%= bgroup.o_positive %></td>
+        <td><%= bgroup.ab_positive %></td>
+        <td><%= bgroup.a_negative %></td>
+        <td><%= bgroup.b_negative %></td>
+        <td><%= bgroup.o_negative %></td>
+        <td><%= bgroup.ab_negative %></td>
+        <td><%= bgroup.center %></td>
+        <td><%= link_to 'Show', bgroup %></td>
+        <td><%= link_to 'Edit', edit_bgroup_path(bgroup) %></td>
+        <td><%= link_to 'Destroy', bgroup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bgroup', new_bgroup_path %>

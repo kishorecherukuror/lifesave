@@ -1,0 +1,1 @@
+json.array! @bgroups, partial: 'bgroups/bgroup', as: :bgroup

@@ -1,0 +1,53 @@
+<%= form_for(@bgroup) do |f| %>
+  <% if @bgroup.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bgroup.errors.count, "error") %> prohibited this bgroup from being saved:</h2>
+
+      <ul>
+      <% @bgroup.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :a_positive %><br>
+    <%= f.number_field :a_positive %>
+  </div>
+  <div class="field">
+    <%= f.label :b_positive %><br>
+    <%= f.number_field :b_positive %>
+  </div>
+  <div class="field">
+    <%= f.label :o_positive %><br>
+    <%= f.number_field :o_positive %>
+  </div>
+  <div class="field">
+    <%= f.label :ab_positive %><br>
+    <%= f.number_field :ab_positive %>
+  </div>
+  <div class="field">
+    <%= f.label :a_negative %><br>
+    <%= f.number_field :a_negative %>
+  </div>
+  <div class="field">
+    <%= f.label :b_negative %><br>
+    <%= f.number_field :b_negative %>
+  </div>
+  <div class="field">
+    <%= f.label :o_negative %><br>
+    <%= f.number_field :o_negative %>
+  </div>
+  <div class="field">
+    <%= f.label :ab_negative %><br>
+    <%= f.number_field :ab_negative %>
+  </div>
+  <div class="field">
+    <%= f.label :center_id %><br>
+    <%= f.text_field :center_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+json.extract! bgroup, :id, :a_positive, :b_positive, :o_positive, :ab_positive, :a_negative, :b_negative, :o_negative, :ab_negative, :center_id, :created_at, :updated_at
+json.url bgroup_url(bgroup, format: :json)

@@ -1,0 +1,1 @@
+json.partial! "bgroups/bgroup", bgroup: @bgroup
